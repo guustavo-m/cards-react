@@ -2,6 +2,11 @@
 import Card from './components/Card'
 import './App.css'
 import helloworld from "./assets/img/helloworld.png"
+import i20 from "./assets/img/20.png"
+import i21 from "./assets/img/21.png"
+import i22 from "./assets/img/22.png"
+import i23 from "./assets/img/23.png"
+
 import i24 from "./assets/img/24.png"
 import i25 from "./assets/img/25.png"
 import i26 from "./assets/img/26.png"
@@ -45,13 +50,13 @@ const cards = [
   
   { id: 19, type: 4, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
   
-  { id: 20, type: 5, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  { id: 20, type: 5, titulo: 'O que é useState', texto: 'Um Hook fundamental do React que permite adicionar o estado mais atual a componentes funcionais', code: i20, tip:"💡 É uma variável que atualiza a tela quando muda."},
   
-  { id: 21, type: 5, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  { id: 21, type: 5, titulo: 'Atualizar um estado', texto: 'Significa alterar os dados internos de um componente, forçando a renderização novamente', code: i21, tip:"💡 Use sempre o set. Ex: setNome('João')."},
   
-  { id: 22, type: 5, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  { id: 22, type: 5, titulo: 'State em fomulários', texto: 'Pode ser vista em fomulários como condição atual dos campo,ex:validação de valores e estado de aplicaçãp como, carregando/enviado', code: i22, tip:"💡 Use onChange para capturar o que foi digitado."},
   
-  { id: 23, type: 5, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  { id: 23, type: 5, titulo: 'Objetos e arrays', texto: 'A imutabilidade é essencial nesses casos, pois em vez de alterar o original, e preciso criar uma copia com as alterações desejadas', code: i23, tip:"💡 Use ... para copiar o que já existe antes de mudar."},
   
   { id: 24, type: 6, titulo: "Renderização Condicional", texto: 'Permite exibir componentes ou elementos apenas quando certas condições são atendidas, utilizando operadores lógicos como && ou ternários.', code: i24, tip:"💡 Use o operador && quando quiser renderizar algo apenas se a condição for verdadeira."},
   
