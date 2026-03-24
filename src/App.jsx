@@ -1,0 +1,95 @@
+//App.jsx dados vem e o map rola
+import Card from './components/Card'
+import './App.css'
+import helloworld from "./assets/img/helloworld.png"
+import i24 from "./assets/img/24.png"
+import i25 from "./assets/img/25.png"
+import i26 from "./assets/img/26.png"
+
+const cards = [
+  { id: 1, type: 1, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+
+  { id: 2, type: 1, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 3, type: 1, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 4, type: 1, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 5, type: 1, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 6, type: 1, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 7, type: 2, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 8, type: 2, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 9, type: 2, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 10, type: 2, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 11, type: 2, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 12, type: 3, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 13, type: 3, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 14, type: 3, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 15, type: 3, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 16, type: 4, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 17, type: 4, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 18, type: 4, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 19, type: 4, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 20, type: 5, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 21, type: 5, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 22, type: 5, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 23, type: 5, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 24, type: 6, titulo: "Renderização Condicional", texto: 'Permite exibir componentes ou elementos apenas quando certas condições são atendidas, utilizando operadores lógicos como && ou ternários.', code: i24, tip:"💡 Use o operador && quando quiser renderizar algo apenas se a condição for verdadeira."},
+  
+  { id: 25, type: 6, titulo: 'Listas com map( )', texto: 'RO método map() percorre um array de dados e retorna uma lista de elementos JSX, transformando dados brutos em componentes visuais.', code: i25, tip:"💡 O map() sempre retorna um novo array, por isso é ideal para imutabilidade no React."},
+  
+  { id: 26, type: 6, titulo: 'A propriedade key nas listas', texto: 'As keys ajudam o React a identificar quais itens sofreram alteração, foram adicionados ou removidos, garantindo uma atualização eficiente do DOM.', code: i26, tip:"💡 Evite usar o índice do array como key se a ordem dos itens puder mudar."},
+  
+  { id: 27, type: 7, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 28, type: 7, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 29, type: 7, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"},
+  
+  { id: 30, type: 8, titulo: 'O que é react', texto: 'React é uma biblioteca JavaScript de código aberto, focada na criação de interfaces de usuário (UI) interativas e eficientes.', code: helloworld, tip:"💡 Dica sobre React"}
+]
+
+function App() {
+  return (
+    <>
+    <div className="container">
+      <h1>Cards de Estudo</h1>
+      <p className='subtitulo'>Veja os cards a seguir para entender um pouco mais sobre React e Vite</p>
+    <div className="grid">
+      {cards.map((item) => (
+        <Card
+          key={item.type}
+          id={item.id}
+          titulo={item.titulo}
+          texto={item.texto}
+          tipo={item.type}
+          code={item.code && <img src={item.code} alt={item.titulo}></img>}
+          dica={item.tip}
+        />
+      ))}
+    </div>
+    </div>
+    </>
+  )
+}
+
+export default App
